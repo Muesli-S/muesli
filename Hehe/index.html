@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <div class="box">
+
+    </div>
+    <h1 class="text" id="text1">Will you be my valentine? <3 </h1>
+    <h2 class="text2" id="text2">Pleaseeeeeeeeeeeeee, I loveeee youuuuuu</h2>
+
+    <button class="yes" id="yes"> Yes cutie</button>
+    <button class="no" id="move"> No, I dont like you</button>
+   
+        
+        <p id="text3"></p>
+    
+
+
+
+    <script>
+        const text = document.getElementById('text1');
+        const text2 = document.getElementById('text2');
+        const text3 = document.getElementById('text3');
+
+        const yes = document.getElementById('yes');
+        const button = document.getElementById('move');
+
+        function moveButton() {
+    let maxX = window.innerWidth - button.offsetWidth;  // Max X position
+    let maxY = window.innerHeight - button.offsetHeight; // Max Y position
+
+    let x = Math.random() * maxX;
+    let y = Math.random() * maxY;
+
+    if (x + button.offsetWidth > window.innerWidth) {
+        x = window.innerWidth - button.offsetWidth - 10; 
+    }
+    if (y + button.offsetHeight > window.innerHeight) {
+        y = window.innerHeight - button.offsetHeight - 10; 
+    }
+
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+}
+
+button.style.position = 'absolute';
+        button.addEventListener("mouseenter", moveButton);
+
+        yes.addEventListener("click", () => {
+            const box = document.querySelector('.box');
+            const boxRect = box.getBoundingClientRect();
+            
+            text.innerText="Yaayayyayayay";
+            text.classList.add("new");
+            yes.style.display = "none";
+            text2.innerText="I knew you love me 🥰🥰🥰";
+            text3.innerText="Muesli loves you toooooo 🥰🥰🤭🤭";
+            text3.classList.add("para");
+            text2.classList.add("new2");
+            button.style.display="none";
+
+            for (let i = 0; i < 20; i++) {
+        const flower = document.createElement("div");
+        flower.classList.add("flower"); 
+        document.body.appendChild(flower);
+
+        let x, y;
+        do {
+            
+            x = Math.random() * window.innerWidth;
+            y = Math.random() * window.innerHeight;
+        } while (x >= boxRect.left && x <= boxRect.right && y >= boxRect.top && y <= boxRect.bottom);
+
+        
+        flower.style.left = `${x}px`;
+        flower.style.top = `${y}px`;
+        flower.style.position = "absolute";
+    }
+        })
+
+
+
+
+    </script>
+
+</body>
+</html>

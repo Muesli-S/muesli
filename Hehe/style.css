@@ -1,0 +1,183 @@
+
+body {
+    background-color: pink;
+    background-image: url(Cartoon-Roses-PNG-Pic.png);
+    background-size: 20cm;
+    margin: 0;
+    height: 100vh;
+    position: relative;
+ 
+}
+
+.box {
+    position: absolute;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    display: inline-block;
+    border-style: solid;
+    padding: 200px 600px 200px 200px;
+    padding-right: px;
+    border-color: pink;
+    margin-left: 25%;
+    margin-top: 10%;
+    border-radius: 20px;
+}
+
+.text{
+    position: absolute;
+    margin-left: 36%;
+    margin-top: 12%;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(224, 65, 65);
+    animation: fadein 2s ease-in-out;
+
+}
+
+
+
+
+
+.text2{
+    position: absolute;
+    margin-left: 34%;
+    margin-top: 17%;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(224, 65, 121);
+    animation: fadein 2s ease-in-out ;
+
+}
+
+
+
+
+
+
+.para{
+    position: absolute;
+    margin-left: 30%;
+    margin-top: 28%;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(224, 65, 121);
+    animation: fadein 2s ease-in-out ;
+    font-size: 30px;
+    font-weight: 990;
+    background-color: pink;
+    padding: 10px 50px 10px 50px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: .3s;  
+}
+
+.para:hover{
+    color: white;
+}
+
+
+.yes{
+    position:absolute;
+    margin-left: 32%;
+    margin-top: 27%;
+    background-color: rgb(232, 17, 17);
+    border-color: white;
+    border-style: solid;
+    padding: 20px 50px 20px 50px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 20px;
+    animation: fadein 4s ease-in-out ;
+
+}
+
+.yes:hover{
+    color: white;
+    background-color: rgba(244, 80, 143, 0.929);
+}
+
+.no{
+    position:absolute;
+    margin-left: 50%;
+    margin-top: 27%;
+    background-color: rgb(232, 17, 17);
+    border-color: white;
+    border-style: solid;
+    padding: 20px 50px 20px 50px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 20px;
+    animation: fadein 4s ease-in-out ;
+
+}
+
+.no:hover{
+    color: white;
+    background-color: rgba(244, 80, 143, 0.929);
+}
+
+.yes:hover{
+    color: white;
+    background-color: rgba(244, 80, 143, 0.929);
+}
+
+.new{
+    font-size: 30px;
+    margin-top: 16%;
+    margin-left: 42%;
+    animation: fadein 2s ease-in-out ;
+
+}
+
+.new2{
+    font-size: 24px;
+    margin-top: 22%;
+    margin-left: 40%;
+    animation: fadein 2s ease-in-out ;
+
+}
+.flower {
+    background-image: url('rosee.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 0px;  /* Start with no size */
+    height: 0px; /* Start with no size */
+    animation: bloomEffect 2s forwards; /* Trigger the bloom effect */
+}
+
+@keyframes bloomEffect {
+    0% {
+        width: 0px;
+        height: 0px;
+        transform: translateY(20px);
+
+    }
+    
+    100% {
+        width: 50px;  /* Final size after blooming */
+        height: 50px;
+        transform: translateY(0px);
+
+    }
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100%{
+        opacity: 100;
+        transform: translateY(0); 
+    }
+}
